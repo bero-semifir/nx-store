@@ -1,5 +1,5 @@
 import { Banner } from '@myorg/common-ui';
-import { exampleProducts } from '@myorg/products';
+import { exampleProducts, Product } from '@myorg/products';
 
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
 export function App() {
@@ -7,7 +7,7 @@ export function App() {
     <>
       <Banner text="Welcome to the store!" />
       <ul>
-        {exampleProducts.map((product) => (
+        {exampleProducts.map((product: Product) => (
           <li key={product.id}>
             <strong>{product.name}</strong> Price: {product.price}
           </li>
